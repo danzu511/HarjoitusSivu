@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "cd ../harjoitusosa2/part2-notes/part2-notes && npm run build && xcopy /E /Y /I build C:\\Users\\Dan\\VSC\\Dan_FSO2023\\MUUT\\harjoitus3\\build",
+    "deploy:full": "npm run build:ui && git add . && git commit -m kuibuild && git push"
   },
   "author": "",
   "license": "ISC",

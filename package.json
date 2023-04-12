@@ -8,13 +8,16 @@
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "cd ../harjoitusosa2/part2-notes/part2-notes && npm run build && xcopy /E /Y /I build C:\\Users\\Dan\\VSC\\Dan_FSO2023\\MUUT\\harjoitus3\\build",
-    "deploy:full": "npm run build:ui && git add . && git commit -m kuibuild && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
+  "proxy": "http://localhost:3001",
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "mongoose": "^7.0.3",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
